@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CalcScientific"
+             x:Class="CalcScientific.MainPage">
+
+    <StackLayout Orientation="Vertical" BackgroundColor="Black">
+
+        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical">
+
+            <Entry x:Name="entryAnswer" Placeholder="0000" FontSize="Large" VerticalOptions="FillAndExpand" 
+             HorizontalOptions="FillAndExpand" TextColor="Black" BackgroundColor="Orange" IsEnabled="False" Text="0"/>
+            <!--  Text="{Binding Input}"/> -->
+
+            <Grid x:Name="GrdCalc" Margin="10, 10, 10, 10"
+              HorizontalOptions="FillAndExpand" VerticalOptions="End"
+              BackgroundColor="AntiqueWhite">
+
+                <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            
+            <!-- ROW ONE BUTTONS  -->
+            <Button x:Name="BtnNPR"  Text="nPr" Grid.Column="0" Grid.Row="0" Clicked="BtnNPR_Clicked"/>
+            <Button x:Name="BtnNCR" Text="nCr" Grid.Column="1" Grid.Row="0" Clicked="BtnNCR_Clicked"/>
+                <Button x:Name="BtnMC" Text="mc" Grid.Column="2" Grid.Row="0" Clicked="BtnMC_Clicked"/>
+                <Button x:Name="BtnMPlus" Text="m+" Grid.Column="3" Grid.Row="0" Clicked="BtnMPlus_Clicked"/>
+                <Button x:Name="BtnMMinus" Text="m-" Grid.Column="4" Grid.Row="0" Clicked="BtnMMinus_Clicked"/>
+                <Button x:Name="BtnMR" Text="mr" Grid.Column="5" Grid.Row="0" Clicked="BtnMR_Clicked"/>
+                <Button x:Name="BtnAC" Text="AC" Grid.Column="6" Grid.Row="0" Clicked="BtnAC_Clicked"/>
+                <Button x:Name="BtnInverse" Text="+/-" Grid.Column="7" Grid.Row="0" Clicked="BtnInverse_Clicked"/>
+                <Button x:Name="BtnRemainder" Text="%" Grid.Column="8" Grid.Row="0" Clicked="BtnRemainder_Clicked"/>
+                <Button x:Name="BtnDivide" Text="*/*" Grid.Column="9" Grid.Row="0" BackgroundColor="Orange" TextColor="White" Clicked="BtnDivide_Clicked"/>
+
+                <!-- ROW TWO BUTTONS  -->
+                <Button x:Name="BtnSecondFunction" Text="2nd" Grid.Column="0" Grid.Row="1" Clicked="BtnSecondFunction_Clicked"/>
+                <Button x:Name="BtnSquared" Text="X^2" Grid.Column="1" Grid.Row="1" Clicked="BtnSquared_Clicked"/>
+                <Button x:Name="BtnCubed" Text="X^3" Grid.Column="2" Grid.Row="1" Clicked="BtnCubed_Clicked"/>
+                <Button x:Name="BtnAnyPower" Text="X^y" Grid.Column="3" Grid.Row="1" Clicked="BtnAnyPower_Clicked"/>
+                <Button x:Name="BtnPowerToE" Text="e^x" Grid.Column="4" Grid.Row="1" Clicked="BtnPowerToE_Clicked"/>
+                <Button x:Name="BtnPowerToTen" Text="10^x" Grid.Column="5" Grid.Row="1" Clicked="BtnPowerToTen_Clicked"/>
+                <Button x:Name="BtnSeven" Text="7" Grid.Column="6" Grid.Row="1" BackgroundColor="Beige" Clicked="BtnSeven_Clicked"/>
+                <Button x:Name="BtnEight" Text="8" Grid.Column="7" Grid.Row="1" BackgroundColor="Beige" Clicked="BtnEight_Clicked"/>
+                <Button x:Name="BtnNine" Text="9" Grid.Column="8" Grid.Row="1" BackgroundColor="Beige" Clicked="BtnNine_Clicked"/>
+                <Button x:Name="BtnMultiply" Text="*" Grid.Column="9" Grid.Row="1"  BackgroundColor="Orange" TextColor="White" Clicked="BtnMultiply_Clicked"/>
+
+                <!-- ROW THREE BUTTONS  -->
+                <Button x:Name="BtnDivideOverOne" Text="1/X" Grid.Column="0" Grid.Row="2" Clicked="BtnDivideOverOne_Clicked"/>
+                <Button x:Name="BtnSquareRoot" Text="√x" Grid.Column="1" Grid.Row="2" Clicked="BtnSquareRoot_Clicked"/>
+                <Button x:Name="BtnCubeRoot" Text="3√x" Grid.Column="2" Grid.Row="2" Clicked="BtnCubeRoot_Clicked"/>
+                <Button x:Name="BtnCustomRoot" Text="y√x" Grid.Column="3" Grid.Row="2" Clicked="BtnCustomRoot_Clicked"/>
+                <Button x:Name="BtnNaturalLog" Text="ln" Grid.Column="4" Grid.Row="2" Clicked="BtnNaturalLog_Clicked"/>
+                <Button x:Name="BtnLogToTen" Text="Log10" Grid.Column="5" Grid.Row="2" Clicked="BtnLogToTen_Clicked"/>
+                <Button x:Name="BtnFour" Text="4" Grid.Column="6" Grid.Row="2" BackgroundColor="Beige" Clicked="BtnFour_Clicked"/>
+                <Button x:Name="BtnFive" Text="5" Grid.Column="7" Grid.Row="2" BackgroundColor="Beige" Clicked="BtnFive_Clicked"/>
+                <Button x:Name="BtnSix" Text="6" Grid.Column="8" Grid.Row="2" BackgroundColor="Beige" Clicked="BtnSix_Clicked"/>
+                <Button x:Name="BtnMinus" Text="-" Grid.Column="9" Grid.Row="2"  BackgroundColor="Orange" TextColor="White" Clicked="BtnMinus_Clicked"/>
+
+                <!-- ROW FOUR BUTTONS  -->
+                <Button x:Name="BtnFactorial" Text="x!" Grid.Column="0" Grid.Row="3" Clicked="BtnFactorial_Clicked"/>
+                <Button x:Name="BtnSin" Text="sin" Grid.Column="1" Grid.Row="3" Clicked="BtnSin_Clicked"/>
+                <Button x:Name="BtnCos" Text="cos" Grid.Column="2" Grid.Row="3" Clicked="BtnCos_Clicked"/>
+                <Button x:Name="BtnTan" Text="tan" Grid.Column="3" Grid.Row="3" Clicked="BtnTan_Clicked"/>
+                <Button x:Name="BtnE" Text="e" Grid.Column="4" Grid.Row="3" Clicked="BtnE_Clicked"/>
+                <Button x:Name="BtnEE" Text="EE" Grid.Column="5" Grid.Row="3" Clicked="BtnEE_Clicked"/>
+                <Button x:Name="BtnOne" Text="1" Grid.Column="6" Grid.Row="3" BackgroundColor="Beige" Clicked="BtnOne_Clicked"/>
+                <Button x:Name="BtnTwo" Text="2" Grid.Column="7" Grid.Row="3" BackgroundColor="Beige" Clicked="BtnTwo_Clicked"/>
+                <Button x:Name="BtnThree" Text="3" Grid.Column="8" Grid.Row="3" BackgroundColor="Beige" Clicked="BtnThree_Clicked"/>
+                <Button x:Name="BtnPlus" Text="+" Grid.Column="9" Grid.Row="3" BackgroundColor="Orange" TextColor="White" Clicked="BtnPlus_Clicked"/>
+
+                <!-- ROW FIVE BUTTONS  -->
+                <Button x:Name="BtnRad" Text="Rad" Grid.Column="0" Grid.Row="4" Clicked="BtnRad_Clicked"/>
+                <Button x:Name="BtnSinh" Text="sinh" Grid.Column="1" Grid.Row="4" Clicked="BtnSinh_Clicked"/>
+                <Button x:Name="BtnCosh" Text="cosh" Grid.Column="2" Grid.Row="4" Clicked="BtnCosh_Clicked"/>
+                <Button x:Name="BtnTanh" Text="tanh" Grid.Column="3" Grid.Row="4" Clicked="BtnTanh_Clicked"/>
+                <Button x:Name="BtnPi" Text="π" Grid.Column="4" Grid.Row="4" Clicked="BtnPi_Clicked"/>
+                <Button x:Name="BtnRand" Text="Rand" Grid.Column="5" Grid.Row="4" Clicked="BtnRand_Clicked"/>
+                <Button x:Name="BtnBackspace" Text="BackSpace" Grid.Column="6" Grid.Row="4" BackgroundColor="WhiteSmoke" Clicked="BtnBackspace_Clicked"/>
+                <Button x:Name="BtnZero" Text="0" Grid.Column="7" Grid.Row="4" BackgroundColor="Beige" Clicked="BtnZero_Clicked"/>
+                <Button x:Name="BtnDecimalPoint" Text="." Grid.Column="8" Grid.Row="4" BackgroundColor="Beige" Clicked="BtnDecimalPoint_Clicked"/>
+                <Button x:Name="BtnEquals" Text="=" Grid.Column="9" Grid.Row="4" BackgroundColor="Orange" TextColor="White" Clicked="BtnEquals_Clicked"/>
+
+
+
+
+
+            </Grid>
+
+
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
